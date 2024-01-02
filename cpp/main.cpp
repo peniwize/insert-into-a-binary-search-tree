@@ -168,7 +168,7 @@ TreeNode* createBst(std::vector<int> values) {
 std::vector<int> toVector(TreeNode const* root) {
     std::vector<int> result{};
 
-    // Preorder depth first search.
+    // In-order depth first search.
     if (root) {
         auto const leftResult = toVector(root->left);
         std::copy(leftResult.begin(), leftResult.end(), std::back_inserter(result));
